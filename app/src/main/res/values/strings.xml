@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">cookbook1</string>
+    <string name="ok">OK</string>
+    <string name="TMS">TMS</string>
+    <string name="deviceNotDetected">The device is not detected, or you have not asked USB permissions.\nPlease click the button \'Grant USB Permissions\'"</string>
+
+</resources>

@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MorphoSample" >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/mainlayout">
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="48">
+	        <include layout="@layout/activity_morpho_sample_firstpart"/>
+	    </LinearLayout>
+        <View android:background="@android:color/darker_gray" 
+            android:layout_width="fill_parent" 
+            android:layout_height="2dp" />   
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="52">
+            <include layout="@layout/activity_morpho_sample_secondpart"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

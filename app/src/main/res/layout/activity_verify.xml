@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+ 
+    <!-- BEGIN : Avoid the keypad deployment when the activity starts -->
+    <LinearLayout
+        android:focusable="true" android:focusableInTouchMode="true"
+        android:layout_width="0px" android:layout_height="0px"/>
+    <!-- END : Avoid the keypad deployment when the activity starts -->  
+    
+    <TextView android:text="@string/desc_verify"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    
+    <TextView android:text="@string/authenticationmode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/authenticationmodelabel"
+        android:paddingLeft="5dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/darker_gray"/>
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="66"
+        android:id="@+id/authenticationmode">
+            
+        <RadioButton android:id="@+id/file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/filesimulation"
+            android:onClick="onAuthentModeClicked"/>
+        <RadioButton android:id="@+id/database"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checklocalbase"
+            android:onClick="onAuthentModeClicked"/>
+   </RadioGroup>
+   <TextView android:text="@string/selectfile"
+        android:id="@+id/idselectfilelabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/darker_gray"/>
+   <TextView android:text=""
+        android:id="@+id/selectedfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textColor="@android:color/black"/>
+   <Button 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectfile"
+        android:paddingLeft="5dp"
+        android:text="@string/selectfile"
+        android:onClick="onSelectFileClick" />
+</LinearLayout>

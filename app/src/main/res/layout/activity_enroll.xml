@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/desc_enroll" />
+
+    <TextView
+        android:id="@+id/codeexport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="5dp"
+        android:text="@string/newenroll"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/idnumberlabelEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/idnumber" />
+
+            <EditText
+                android:id="@+id/idnumberEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/idnumber"
+                android:inputType="text"
+                android:nextFocusDown="@+id/firstnameEnroll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/firstnamelabelEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname" />
+
+            <EditText
+                android:id="@+id/firstnameEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/firstname"
+                android:inputType="text"
+                android:nextFocusDown="@+id/lastnameEnroll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lastnamelabelEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/firstnamelabelEnroll"
+                android:text="@string/lastname" />
+
+            <EditText
+                android:id="@+id/lastnameEnroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lastname"
+                android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:paddingTop="7dp"
+            android:text="@string/fingernumber" />
+
+        <RadioGroup
+            android:id="@+id/fingernumberEnroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="66"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/onefingerEnroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:checked="true"
+                android:onClick="onNumberFingerClicked"
+                android:text="@string/one" />
+
+            <RadioButton
+                android:id="@+id/twofingerEnroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:onClick="onNumberFingerClicked"
+                android:text="@string/two" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/codeexport2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="5dp"
+        android:text="@string/space_"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <CheckBox
+            android:id="@+id/updateTemplate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onUpdateTemplateClicked"
+            android:text="@string/updateTemplate" />
+
+        <CheckBox
+            android:id="@+id/savepkindatabase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:checked="true"
+            android:onClick="onSavePKInDatabaseClicked"
+            android:text="@string/savepkindatabase" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/fingerIndex" />
+
+        <Spinner
+            android:id="@+id/fingerIndex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/fingerIndex" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/exportimage" />
+
+        <Spinner
+            android:id="@+id/exportimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/exportimage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/templatetype" />
+
+        <Spinner
+            android:id="@+id/fptemplatetypeEnroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/templatetype" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/templatefvptype" />
+
+        <Spinner
+            android:id="@+id/fvptemplatetypeEnroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/templatefvptype" />
+    </LinearLayout>
+
+</LinearLayout>

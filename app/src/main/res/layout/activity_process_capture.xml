@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+	<TextView android:text="@string/finger1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/finger1"
+	    android:paddingLeft="5dp"
+	    android:textColor="@android:color/black"
+	    android:background="@android:color/darker_gray"/>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+	    <LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="33">
+		    <ImageView
+				android:id="@+id/imageView1"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+				android:background="@android:color/white"
+				android:layout_gravity="center"
+                android:contentDescription="imageView1"
+				android:padding="4dp" />
+        </LinearLayout>
+        <LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="33">
+			<ImageView
+				android:id="@+id/imageView2"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+				android:background="@android:color/white"
+				android:layout_gravity="center"
+				android:contentDescription="imageView2"
+				android:padding="4dp" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="33">
+			<ImageView
+				android:id="@+id/imageView3"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+				android:background="@android:color/white"
+				android:layout_gravity="center"
+                android:contentDescription="@+id/RelativeLayout2"
+				android:padding="4dp" />
+		</LinearLayout>
+	</LinearLayout>
+      		  
+	<TextView android:text="@string/finger2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/finger2"
+		android:paddingLeft="5dp"
+		android:textColor="@android:color/black"
+		android:background="@android:color/darker_gray"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="33">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+                android:background="@android:color/white"
+                android:layout_gravity="center"
+                android:contentDescription="imageView1"
+                android:padding="4dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="33">
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+                android:background="@android:color/white"
+                android:layout_gravity="center"
+                android:contentDescription="imageView2"
+                android:padding="4dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="33">
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="83dp"
+                android:layout_height="130dp"          
+                android:background="@android:color/white"
+                android:layout_gravity="center"
+                android:contentDescription="@+id/RelativeLayout2"
+                android:padding="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+     	<ProgressBar
+			style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/vertical_progressbar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="50"
+			android:max="100" 
+			android:padding="10dp"
+			android:layout_gravity="center"/>
+	    <TextView
+			android:id="@+id/textViewMessage"
+			android:layout_width="wrap_content"
+			android:layout_height="25dp"
+			android:layout_weight="50"
+			android:gravity="center"
+			android:text="@string/sensormessages"
+			android:layout_margin="5dp"
+			android:background="@android:color/white"
+			android:textColor="@android:color/secondary_text_light" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,203 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollViewBio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/scrollbar_shape_style"
+    android:fadeScrollbars="false"
+    >
+
+    <LinearLayout
+        android:id="@+id/biosettingslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:layout_marginRight="6dp"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/matchingthreshold" />
+
+            <EditText
+                android:id="@+id/matchingthresholdvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusDown="@+id/timeoutsecvalue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timeoutsec" />
+
+            <EditText
+                android:id="@+id/timeoutsecvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusDown="@+id/fingerqualitythresholdvalue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/coderchoice" />
+
+            <Spinner
+                android:id="@+id/coderchoice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:prompt="@string/coderchoice" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/securitylevel" />
+
+            <Spinner
+                android:id="@+id/securitylevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:prompt="@string/securitylevel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/matchingstrategy" />
+
+            <Spinner
+                android:id="@+id/matchingstrategy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:prompt="@string/matchingstrategy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/acquisitionStrategy" />
+
+            <Spinner
+                android:id="@+id/acquisitionStrategy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:prompt="@string/acquisitionStrategy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/forcefingerplacementontop"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="55"
+                android:onClick="onForceFingerPlacementOnTopClick"
+                android:text="@string/forcefingerplacementontop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="45"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/advancedseclevelcompatibilityreq"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:onClick="onAdvancedSecLevelCompatibilityReq"
+                android:text="@string/advancedseclevelcompatibilityreq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="45"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/fingerqualitythreshold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="onFingerQualityThresholdClick"
+                android:text="@string/fingerqualitythreshold" />
+
+            <EditText
+                android:id="@+id/fingerqualitythresholdvalue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/yellow"
+                android:ems="5"
+                android:gravity="center_horizontal"
+                android:hint="0"
+                android:inputType="number"
+                android:maxLength="3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

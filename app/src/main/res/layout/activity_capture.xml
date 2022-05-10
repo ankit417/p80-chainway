@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- BEGIN : Avoid the keypad deployment when the activity starts -->
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+    <!-- END : Avoid the keypad deployment when the activity starts -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/desc_capture" />
+
+    <TextView
+        android:id="@+id/codeexport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="5dp"
+        android:text="@string/codeexport"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/idnumberlabelCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/idnumber" />
+
+            <EditText
+                android:id="@+id/idnumberCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/idnumber"
+                android:inputType="text"
+                android:nextFocusDown="@+id/firstnameCapture" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/firstnamelabelCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/firstname" />
+
+            <EditText
+                android:id="@+id/firstnameCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/firstname"
+                android:inputType="text"
+                android:nextFocusDown="@+id/lastnameCapture" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lastnamelabelCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/firstnamelabelCapture"
+                android:text="@string/lastname" />
+
+            <EditText
+                android:id="@+id/lastnameCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/lastname"
+                android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:paddingTop="7dp"
+            android:text="@string/fingernumber" />
+
+        <RadioGroup
+            android:id="@+id/fingernumberCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="66"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/onefingerCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:checked="true"
+                android:onClick="onNumberFingerClicked"
+                android:text="@string/one" />
+
+            <RadioButton
+                android:id="@+id/twofingerCapture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:onClick="onNumberFingerClicked"
+                android:text="@string/two" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:paddingTop="7dp"
+            android:text="@string/capturetype" />
+
+        <RadioGroup
+            android:id="@+id/capturetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="75"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/enroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:checked="true"
+                android:onClick="onCaptureTypeClicked"
+                android:text="@string/enroll" />
+
+            <RadioButton
+                android:id="@+id/verif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:onClick="onCaptureTypeClicked"
+                android:text="@string/verif" />
+
+            <CheckBox
+                android:id="@+id/latentdetection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:checked="false"
+                android:clickable="false"
+                android:onClick="onLatentClicked"
+                android:text="@string/latentdetection"
+                android:textColor="@android:color/darker_gray" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="5dp"
+        android:text="@string/outputtype"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/templatetype" />
+
+        <Spinner
+            android:id="@+id/fptemplatetypeCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/templatetype" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/templatefvptype" />
+
+        <Spinner
+            android:id="@+id/fvptemplatetypeCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/templatefvptype" />
+    </LinearLayout>
+
+</LinearLayout>

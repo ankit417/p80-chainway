@@ -1,0 +1,102 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/scrollbar_shape_style"
+    android:fadeScrollbars="false"
+    >
+
+    <LinearLayout
+        android:id="@+id/infodataselayout"
+        android:layout_width="fill_parent"
+        android:layout_height="284dp"
+         android:layout_marginRight="6dp"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/maximumnumberofrecord" />
+
+            <TextView
+                android:id="@+id/maximumnumberofrecordvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@+id/maximumnumberofrecordvalue"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+       	<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/currentnumberofusedrecords" />
+
+            <TextView
+                android:id="@+id/currentnumberofusedrecordvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@+id/currentnumberofusedrecordvalue"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/numberoffingerperrecord" />
+
+            <TextView
+                android:id="@+id/numberoffingerperrecordvalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@+id/numberoffingerperrecordvalue"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/encryptDatabase" />
+
+            <TextView
+                android:id="@+id/encryptDatabase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"                
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

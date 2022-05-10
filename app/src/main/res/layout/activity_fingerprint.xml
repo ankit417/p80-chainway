@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- BEGIN : Avoid the keypad deployment when the activity starts -->
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+    <!-- END : Avoid the keypad deployment when the activity starts -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/desc_fingerprint" />
+
+    <RadioGroup
+        android:id="@+id/fingerprintmode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="66"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/verifymode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="onFingerPrintModeClicked"
+            android:text="@string/verifymode" />
+
+        <RadioButton
+            android:id="@+id/enrollmode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onFingerPrintModeClicked"
+            android:text="@string/enrollmode" />
+        
+        <CheckBox
+            android:id="@+id/latentdetect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chk_latentdetect" />
+       </RadioGroup>
+                
+    <LinearLayout android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:text="@string/formatimage"/>        
+        <Spinner
+            android:id="@+id/formatimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:prompt="@string/formatimage" />
+    </LinearLayout> 
+
+        <LinearLayout android:orientation="horizontal"
+           android:layout_width="fill_parent"
+        	android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/idlabelcompressionrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="@string/idcompressionratelabel" />
+
+            <EditText
+                android:id="@+id/idcompressionrate"
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content"              
+                android:inputType="numberSigned" 
+                android:maxLength="3"/>
+		</LinearLayout>
+</LinearLayout>

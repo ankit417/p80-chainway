@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent">
+    <ImageView 
+       android:layout_height="30dp"
+       android:layout_width="30dp"
+       android:scaleType="fitCenter" 
+       android:layout_marginTop="5dp" 
+       android:layout_marginBottom="5dp"
+       android:layout_marginLeft="10dp"
+       android:id="@+id/ImageView01"
+       android:src="@drawable/folder"/>
+    <TextView 
+      android:text="@+id/numberofdatabasesvalue" 
+      android:id="@+id/numberofdatabasesvalue" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:singleLine="true" 
+      android:textStyle="bold" 
+      android:layout_marginTop="12dp" 
+      android:layout_marginBottom="5dp"
+      android:layout_marginLeft="10dp"/>
+    <TextView 
+      android:text="@+id/TextView02" 
+      android:id="@+id/TextView02" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:layout_marginTop="12dp" 
+      android:layout_marginBottom="5dp"
+      android:layout_marginLeft="10dp"/>
+</LinearLayout>
